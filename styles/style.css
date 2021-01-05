@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+body,html{ 
+  margin: 0px;
+  padding: 0px;
+}
+/*----------------*/
+/*---Text Style*---/
+/*----------------*/
+h1,h2,h3,h4{
+  font-family: acme;
+  text-align: center;
+  color: #aa0f2e;
+}
+p{
+  text-align: justify;
+  font-family: oswald;
+  font-size: 20px;
+}
+/*----------------*/
+/*-Navigation Bar*-/
+/*----------------*/
+.navmenu{
+  position: fixed;
+  width: 100%;
+  height: auto;
+  background-color: #aa0f2e;
+  display: inline-flex;
+  border-bottom: 10px solid black;
+}
+.navmenu a {
+  align-items: center;
+  color: white;
+  font: 22px acme;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+  padding: 16px;
+  text-decoration: none;
+}
+.navmenu a:hover {
+  background-color: black;
+  transition:0.5s;
+}
+.active{
+  background-color:black;
+  color: #aa0f2e;
+}
+/*----------------*/
+/*--Content CSS---*/
+/*----------------*/
+
+.content{
+  padding-top:50px;
+  padding-bottom: 20px;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-bottom:0px;
+  background-color: white;
+  align-content: center;
+  border: 3px solid green;
+}
