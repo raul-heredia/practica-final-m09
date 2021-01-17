@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  </head>
+  <body bgcolor="#808080">
+    <nav>
+      <div class="logo"><img src="./img/f1.png" href="index.html"></div>
+<input type="checkbox" id="click">
+      <label for="click" class="menu-btn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <ul>
+<li><a class="active" href="index.html">Inicio</a></li>
+<li><a href="1.html">About</a></li>
+<li><a href="#">Services</a></li>
+<li><a href="#">Gallery</a></li>
+<li><a href="signin.html">Sign In</a></li>
+</ul>
+</nav>
+    
+<div class="slider">
+    <div class="images">
+      <img src="./img/slider-mercedes.jpg">
+      <img src="./img/slider-rb.jpg">
+      <img src="./img/slider-mclaren.jpg">
+      <img src="./img/slider-rp.jpg">
+      <img src="./img/slider-renault.jpg">
+      <img src="./img/slider-ferrari.jpg">
+      <img src="./img/slider-alphatauri.jpg">
+      <img src="./img/slider-alfa.jpg">
+      <img src="./img/slider-haas.jpg">
+      <img src="./img/slider-williams.jpg">
+    </div>
+<div class="btm-slides">
+      <span onclick="btm_slide(1)"></span>
+      <span onclick="btm_slide(2)"></span>
+      <span onclick="btm_slide(3)"></span>
+      <span onclick="btm_slide(4)"></span>
+      <span onclick="btm_slide(5)"></span>
+      <span onclick="btm_slide(6)"></span>
+      <span onclick="btm_slide(7)"></span>
+      <span onclick="btm_slide(8)"></span>
+      <span onclick="btm_slide(9)"></span>
+      <span onclick="btm_slide(10)"></span>
+    </div>
+<div class="sliders left" onclick="side_slide(-1)">
+      <span class="fas fa-angle-left"></span>
+    </div>
+<div class="sliders right" onclick="side_slide(1)">
+      <span class="fas fa-angle-right"></span>
+    </div>
+</div>
+<script>
+    var indexValue = 1;
+    showImg(indexValue);
+    function btm_slide(e){showImg(indexValue = e);}
+    function side_slide(e){showImg(indexValue += e);}
+    function showImg(e){
+      var i;
+      const img = document.querySelectorAll('img');
+      const slider = document.querySelectorAll('.btm-slides span');
+      if(e > img.length){indexValue = 1}
+      if(e < 1){indexValue = img.length}
+      for(i = 0; i < img.length; i++){
+        img[i].style.display = "none";
+      }
+      for(i = 0; i < slider.length; i++){
+        slider[i].style.background = "rgba(255,255,255,0.1)";
+      }
+      img[indexValue-1].style.display = "block";
+      slider[indexValue-1].style.background = "white";
+    }
+  </script>
+</body>
+</html>
