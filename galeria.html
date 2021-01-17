@@ -5,8 +5,15 @@
     <title>Inicio</title>
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <style type="text/css">
+    h1{
+      color:#ff1801;
+      text-align: center;
+      padding-top: 20px ;
+    }
+    </style>
   </head>
-  <body bgcolor="#808080">
+  <body>
     <nav>
       <div class="logo"><img src="./img/f1.png" href="index.html"></div>
 <input type="checkbox" id="click">
@@ -14,66 +21,114 @@
         <i class="fas fa-bars"></i>
       </label>
       <ul>
-<li><a class="active" href="index.html">Inicio</a></li>
+<li><a href="index.html">Inicio</a></li>
 <li><a href="1.html">About</a></li>
 <li><a href="#">Services</a></li>
-<li><a href="#">Gallery</a></li>
+<li><a class="active" href="galeria.html">Galería</a></li>
 <li><a href="signin.html">Sign In</a></li>
 </ul>
 </nav>
-    
-<div class="slider">
-    <div class="images">
-      <img src="./img/slider-mercedes.jpg">
-      <img src="./img/slider-rb.jpg">
-      <img src="./img/slider-mclaren.jpg">
-      <img src="./img/slider-rp.jpg">
-      <img src="./img/slider-renault.jpg">
-      <img src="./img/slider-ferrari.jpg">
-      <img src="./img/slider-alphatauri.jpg">
-      <img src="./img/slider-alfa.jpg">
-      <img src="./img/slider-haas.jpg">
-      <img src="./img/slider-williams.jpg">
-    </div>
-<div class="btm-slides">
-      <span onclick="btm_slide(1)"></span>
-      <span onclick="btm_slide(2)"></span>
-      <span onclick="btm_slide(3)"></span>
-      <span onclick="btm_slide(4)"></span>
-      <span onclick="btm_slide(5)"></span>
-      <span onclick="btm_slide(6)"></span>
-      <span onclick="btm_slide(7)"></span>
-      <span onclick="btm_slide(8)"></span>
-      <span onclick="btm_slide(9)"></span>
-      <span onclick="btm_slide(10)"></span>
-    </div>
-<div class="sliders left" onclick="side_slide(-1)">
-      <span class="fas fa-angle-left"></span>
-    </div>
-<div class="sliders right" onclick="side_slide(1)">
-      <span class="fas fa-angle-right"></span>
-    </div>
+    <h1>Imágenes 2020</h1>
+    <!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <img src="./img/slider-mercedes.jpg" style="width:100%">
+    <div class="text">Mercedes-AMG Petronas Formula 1 Team - Lewis Hamilton</div>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="./img/slider-rb.jpg" style="width:100%">
+    <div class="text">Aston Martin Red Bull Racing - Max Verstappen & Alex Albon</div>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="./img/slider-mclaren.jpg" style="width:100%">
+    <div class="text">McLaren F1 Team - Carlos Sainz JR</div>
+  </div>
+  <div class="mySlides fade">
+    <img src="./img/slider-rp.jpg" style="width:100%">
+    <div class="text">BWT Racing Point F1 Team - Sergio Pérez</div>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="./img/slider-renault.jpg" style="width:100%">
+    <div class="text">Renault F1 Team	- Fernando Alonso Abu Dhabi Tests</div>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="./img/slider-ferrari.jpg" style="width:100%">
+    <div class="text">Scuderia Ferrari Mission Winnow - Charles Leclerc</div>
+  </div>
+  <div class="mySlides fade">
+    <img src="./img/slider-alphatauri.jpg" style="width:100%">
+    <div class="text">Scuderia AlphaTauri Honda - Pierre Gasly</div>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="./img/slider-alfa.jpg" style="width:100%">
+    <div class="text">Alfa Romeo Racing ORLEN - Kimi Räikkönen & Antonio Giovinazzi</div>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="./img/slider-haas.jpg" style="width:100%">
+    <div class="text">Haas F1 Team	- Kevin Magnussen</div>
+  </div>
+  <div class="mySlides fade">
+    <img src="./img/slider-williams.jpg" style="width:100%">
+    <div class="text"><br>ROKiT Williams Racing - George Russel & Nicholas Latifi</div>
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
 </div>
-<script>
-    var indexValue = 1;
-    showImg(indexValue);
-    function btm_slide(e){showImg(indexValue = e);}
-    function side_slide(e){showImg(indexValue += e);}
-    function showImg(e){
-      var i;
-      const img = document.querySelectorAll('img');
-      const slider = document.querySelectorAll('.btm-slides span');
-      if(e > img.length){indexValue = 1}
-      if(e < 1){indexValue = img.length}
-      for(i = 0; i < img.length; i++){
-        img[i].style.display = "none";
-      }
-      for(i = 0; i < slider.length; i++){
-        slider[i].style.background = "rgba(255,255,255,0.1)";
-      }
-      img[indexValue-1].style.display = "block";
-      slider[indexValue-1].style.background = "white";
-    }
-  </script>
+<br><br><br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+  <span class="dot" onclick="currentSlide(6)"></span>
+  <span class="dot" onclick="currentSlide(7)"></span>
+  <span class="dot" onclick="currentSlide(8)"></span>
+  <span class="dot" onclick="currentSlide(9)"></span>
+  <span class="dot" onclick="currentSlide(10)"></span>
+</div>
+<script type="text/javascript">
+  var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+
+</script>
 </body>
 </html>
