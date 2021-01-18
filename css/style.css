@@ -11,7 +11,7 @@ nav {
   display: flex;
   height: 80px;
   width: 100%;
-  background: #1b1b1b;
+  background: #000000;
   align-items: center;
   justify-content: space-between;
   padding: 0 50px 0 100px;
@@ -228,7 +228,7 @@ form .signup-link a:hover {
   height: 720px;
   position: relative;
   margin: auto;
-  padding-top: 30px;
+  padding-top: 20px;
 }
 
 /* Hide the images by default */
@@ -273,7 +273,7 @@ form .signup-link a:hover {
   font-weight: bold;
   padding: 8px 12px;
   position: absolute;
-  bottom: -74px;
+  bottom: -60px;
   width: 100%;
   text-align: center;
 }
