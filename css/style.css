@@ -21,7 +21,7 @@ nav .logo img {
   width: 100%;
 }
 
-nav .logo{
+nav .logo {
   width: 128px;
 }
 nav ul {
@@ -228,8 +228,8 @@ form .signup-link a:hover {
 /*Slider*/
 
 .slideshow-container {
-  width: 1280px;
-  height: 720px;
+  width: 960px;
+  height: 540px;
   position: relative;
   margin: auto;
   padding-top: 20px;
@@ -295,10 +295,10 @@ form .signup-link a:hover {
 }
 
 .active,
-.dot:hover {
+.dot:hover,
+.dot2:hover {
   background-color: #ff1801;
 }
-
 /* Fading animation */
 .fade {
   -webkit-animation-name: fade;
