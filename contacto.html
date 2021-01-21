@@ -5,9 +5,10 @@
     <title>Inicio</title>
     <link rel="stylesheet" href="./css/style.css" />
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style type="text/css">
       body {
-        background-image: url("./img/signin-wp.jpg");
+        background-image: url("img/contact-wp.jpg");
         background-size: 100%;
       }
     </style>
@@ -20,33 +21,30 @@
         <i class="fas fa-bars"></i>
       </label>
       <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="1.html">About</a></li>
+        <li><a class="active" href="index.html">Inicio</a></li>
+        <li><a href="#">About</a></li>
         <li><a href="#">Services</a></li>
         <li><a href="galeria.html">Galería</a></li>
-        <li><a class="active" href="signin.html">Sign In</a></li>
+        <li><a href="signin.html">Sign In</a></li>
       </ul>
     </nav>
-    <div class="wrapper">
-      <div class="title">Crear Usuario</div>
+    <div class="contact-wrapper">
+      <div class="title">Contactáctanos</div>
       <form action="#">
-        <div class="field">
-          <input type="text" required />
-          <label>Nombre</label>
-        </div>
         <div class="field">
           <input type="text" required />
           <label>Correo Electrónico</label>
         </div>
         <div class="field">
-          <input type="password" required />
-          <label>Contraseña</label>
+          <input type="text" required />
+          <label>Nombre</label>
+        </div>
+        <div class="textarea">
+          <input type="textarea" required />
+          <label>Mensaje</label>
         </div>
         <div class="field">
-          <input type="submit" value="Crear Cuenta" />
-        </div>
-        <div class="signup-link">
-          ¿Ya tienes una cuenta? <a href="signin.html">Iniciar Sesión</a>
+          <input type="submit" value="Enviar" />
         </div>
       </form>
     </div>

@@ -225,6 +225,90 @@ form .signup-link a:hover {
   text-decoration: underline;
 }
 
+/*Contact Form*/
+.contact-wrapper {
+  width: 600px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+  margin: auto;
+  margin-top: 50px;
+}
+.contact-wrapper .title {
+  font-size: 35px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 100px;
+  color: #fff;
+  user-select: none;
+  border-radius: 15px 15px 0 0;
+  background: #ff1801;
+}
+.contact-wrapper form {
+  padding: 10px 30px 50px 30px;
+}
+.contact-wrapper form .field {
+  height: 50px;
+  width: 100%;
+  margin-top: 20px;
+  position: relative;
+}
+.contact-wrapper form .field input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  font-size: 17px;
+  padding-left: 20px;
+  border: 1px solid lightgrey;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+.contact-wrapper form .field input:focus,
+form .field input:valid {
+  border-color: #b30f01;
+}
+.contact-wrapper form .field label {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  color: #999999;
+  font-weight: 400;
+  font-size: 17px;
+  pointer-events: none;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+}
+.contact-wrapper form .textarea {
+  height: 150px;
+  width: 100%;
+  margin-top: 20px;
+  position: relative;
+}
+.contact-wrapper form .textarea input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  font-size: 17px;
+  padding-left: 20px;
+  border: 1px solid lightgrey;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+.contact-wrapper form .textarea input:focus,
+form .textarea input:valid {
+  border-color: #b30f01;
+}
+.contact-wrapper form .textarea label {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  color: #999999;
+  font-weight: 400;
+  font-size: 17px;
+  pointer-events: none;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+}
 /*Slider*/
 
 .slideshow-container {
