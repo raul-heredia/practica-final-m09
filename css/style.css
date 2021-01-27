@@ -78,6 +78,7 @@ input[type="checkbox"] {
     text-align: center;
     display: block;
     transition: all 0.3s ease;
+    z-index: 1000;
   }
   #click:checked ~ ul {
     left: 0;
@@ -85,6 +86,7 @@ input[type="checkbox"] {
   nav ul li {
     width: 100%;
     margin: 40px 0;
+    z-index: 10;
   }
   nav ul li a {
     width: 100%;
@@ -92,6 +94,7 @@ input[type="checkbox"] {
     display: block;
     font-size: 20px;
     transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    z-index: 10;
   }
   #click:checked ~ ul li a {
     margin-left: 0px;
@@ -99,21 +102,25 @@ input[type="checkbox"] {
   nav ul li a.active,
   nav ul li a:hover {
     background: none;
-    color: cyan;
+    color: #ff1801;
   }
 }
 .content {
+  margin-top: 5%;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+  justify-content: center;
   z-index: -1;
   width: 100%;
   padding: 0 30px;
   color: #1b1b1b;
 }
-
+.twitter-tweet {
+  display: inline-block;
+}
 /* Login Form */
 .wrapper {
   width: 380px;
@@ -192,6 +199,7 @@ form .content input {
   width: 15px;
   height: 15px;
   background: red;
+  z-index: 1;
 }
 form .content label {
   color: #262626;

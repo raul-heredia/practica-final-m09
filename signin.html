@@ -5,13 +5,14 @@
     <title>Inicio</title>
     <link rel="stylesheet" href="./css/style.css" />
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <style type="text/css">
+      body {
+        background-image: url("./img/signin-wp.jpg");
+        background-size: 100%;
+      }
+    </style>
   </head>
-  <style type="text/css">
-    body {
-      background-image: url("./img/signin-wp.jpg");
-      background-size: 100%;
-    }
-  </style>
+  
   <body>
     <nav>
       <div class="logo"><img src="./img/f1.png" href="index.html" /></div>
@@ -20,15 +21,15 @@
         <i class="fas fa-bars"></i>
       </label>
       <ul>
-        <li><a class="active" href="index.html">Inicio</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-        <li><a href="#">Services</a></li>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="social.html">Social</a></li>
         <li><a href="galeria.html">Galería</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
         <li><a class="active" href="signin.html">Iniciar Sesión</a></li>
       </ul>
     </nav>
     <div class="wrapper">
-      <div class="title">Iniciar Sesión</div>
+      <h2 class="title">Iniciar Sesión</h2>
       <form method="POST" action="./php/signin.php" action="./php/signin.php">
         <div class="field">
           <input id="Correo" name="Correo" type="text" required />
