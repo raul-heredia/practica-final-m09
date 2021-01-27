@@ -206,7 +206,7 @@ form .content label {
   user-select: none;
   padding-left: 5px;
 }
-form .field input[type="submit"] {
+.wrapper form .field input[type="submit"] {
   color: #fff;
   border: none;
   padding-left: 0;
@@ -215,10 +215,10 @@ form .field input[type="submit"] {
   font-weight: 500;
   cursor: pointer;
   background: #ff1801;
-  transition: all 0.3s ease;
+  transition: all 0.8s ease;
 }
 form .field input[type="submit"]:active {
-  transform: scale(0.5);
+  transform: scale(0.8);
 }
 form .signup-link {
   color: #262626;
@@ -236,6 +236,7 @@ form .signup-link a:hover {
 /*Contact Form*/
 .contact-wrapper {
   width: 600px;
+  height: 630px;
   background: #fff;
   border-radius: 15px;
   box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
@@ -286,39 +287,31 @@ form .field input:valid {
   transform: translateY(-50%);
   transition: all 0.3s ease;
 }
-.contact-wrapper form .textarea {
-  height: 150px;
-  width: 100%;
-  margin-top: 20px;
-  position: relative;
-}
-.contact-wrapper form .textarea input {
-  height: 100%;
+.contact-wrapper form .field textarea {
   width: 100%;
   outline: none;
   font-size: 17px;
+  padding-top: 5px;
   padding-left: 20px;
   border: 1px solid lightgrey;
   border-radius: 25px;
-  transition: all 0.3s ease;
+  resize: none;
 }
-.contact-wrapper form .textarea input:focus,
-form .textarea input:valid {
-  border-color: #b30f01;
-}
-.contact-wrapper form .textarea label {
-  position: absolute;
-  top: 50%;
-  left: 20px;
+.contact-wrapper form .field textarea::placeholder {
   color: #999999;
-  font-weight: 400;
-  font-size: 17px;
-  pointer-events: none;
-  transform: translateY(-50%);
-  transition: all 0.3s ease;
 }
 /*Slider*/
-
+.contact-wrapper form .field input[type="submit"] {
+  color: #fff;
+  border: none;
+  padding-left: 0;
+  margin-top: 213px;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  background: #ff1801;
+  transition: all 0.8s ease;
+}
 .slideshow-container {
   width: 960px;
   height: 540px;
