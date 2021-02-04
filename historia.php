@@ -46,12 +46,14 @@
     $db = "practicafinal";
 
     $connect = mysqli_connect ($host, $user, $pass, $db) or die ("Error de Connexión");
-    $sentenciasql = "SELECT * FROM pilotos;";
-    $seleccio = mysqli_query($connect, $sentenciasql);
+    $selectpilotos = "SELECT * FROM pilotos;";
+    $seleccionpilotos = mysqli_query($connect, $selectpilotos);
+    $selectescuderias = "SELECT * FROM escuderias;";
+    $seleccionescuderias = mysqli_query($connect, $selectpilotos);
 
     ?>
     
-    <table>
+    <table class="table">
         <tr>
             <th>Año</th>
             <th>Nombre</th>
@@ -59,12 +61,32 @@
             <th>Victorias</th>
         </tr>
     <?php
-        while($row = mysqli_fetch_array($seleccio))
+        while($row = mysqli_fetch_array($seleccionpilotos))
         {
     ?>
         <tr>
             <th><?php echo$row['YEAR'] ?></th>
             <th><?php echo$row['NOMBRE'] ?></th>
+            <th><?php echo$row['ESCUDERIA'] ?></th>
+            <th><?php echo$row['VICTORIAS'] ?></th>
+        </tr>
+    <?php
+        }
+    ?>
+    </table>
+
+    <table>
+        <tr>
+            <th>Año</th>
+            <th>Escudería</th>
+            <th>Victorias</th>
+        </tr>
+    <?php
+        while($row = mysqli_fetch_array($seleccionescuderias))
+        {
+    ?>
+        <tr>
+            <th><?php echo$row['YEAR'] ?></th>
             <th><?php echo$row['ESCUDERIA'] ?></th>
             <th><?php echo$row['VICTORIAS'] ?></th>
         </tr>
