@@ -1,0 +1,21 @@
+    <table>
+        <tr>
+            <th>Año</th>
+            <th>Nombre</th>
+            <th>Escudería</th>
+            <th>Victorias</th>
+        </tr>
+    <?php
+        while($row = mysqli_fetch_array($seleccio))
+        {
+    ?>
+        <tr>
+            <th><?php echo$row['YEAR'] ?></th>
+            <th><?php echo$row['NOMBRE'] ?></th>
+            <th><?php echo$row['ESCUDERIA'] ?></th>
+            <th><?php echo$row['VICTORIAS'] ?></th>
+        </tr>
+    <?php
+        }
+    ?>
+    </table>
