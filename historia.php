@@ -2,20 +2,23 @@
 <html lang="es">
   <head>
     <meta charset="utf-8" />
-    <title>Inicio</title>
+    <title>Historia</title>
     <link rel="shortcut icon" type="image/x-icon" href="./img/favicon.png">
     <link rel="stylesheet" href="./css/style.css" />
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style type="text/css">
       h1,h2,h3 {
+        color: white;
+        text-align: center;
+      }
+      #first{
+        padding-top: 80px;
         color: #ff1801;
+        margin-bottom: 10px;
       }
       nav{
         position: fixed;
-      }
-      #first{
-        margin-top: 50px;
       }
     </style>
   </style>
@@ -36,9 +39,6 @@
         <li><a href="signin.html">Iniciar Sesión</a></li>
       </ul>
     </nav>
-    <h1>‎‎‎</h1>
-    <h1>‎‎‎</h1>
-    <h1>‎‎‎</h1>
     <?php
     $host = "localhost";
     $user = "root";
@@ -52,8 +52,11 @@
     $seleccionescuderias = mysqli_query($connect, $selectpilotos);
 
     ?>
-    
+    <h1 id="first">Campeonatos de F1 desde 1970</h1>
     <table class="table">
+        <tr>
+        <th colspan="4"><h1>Mundial De Pilotos</h1></th>
+        </tr>
         <tr>
             <th>Año</th>
             <th>Nombre</th>
@@ -65,18 +68,20 @@
         {
     ?>
         <tr>
-            <th><?php echo$row['YEAR'] ?></th>
-            <th><?php echo$row['NOMBRE'] ?></th>
-            <th><?php echo$row['ESCUDERIA'] ?></th>
-            <th><?php echo$row['VICTORIAS'] ?></th>
+            <td><?php echo$row['YEAR'] ?></td>
+            <td><?php echo$row['NOMBRE'] ?></td>
+            <td><?php echo$row['ESCUDERIA'] ?></td>
+            <td><?php echo$row['VICTORIAS'] ?></td>
         </tr>
     <?php
         }
     ?>
     </table>
-
-    <table>
-        <tr>
+    <table class="table">
+    <tr>
+        <th colspan="3"><h1>Mundial De Constructores</h1></th>
+        </tr>
+      <tr>
             <th>Año</th>
             <th>Escudería</th>
             <th>Victorias</th>
@@ -86,9 +91,9 @@
         {
     ?>
         <tr>
-            <th><?php echo$row['YEAR'] ?></th>
-            <th><?php echo$row['ESCUDERIA'] ?></th>
-            <th><?php echo$row['VICTORIAS'] ?></th>
+            <td><?php echo$row['YEAR'] ?></td>
+            <td><?php echo$row['ESCUDERIA'] ?></td>
+            <td><?php echo$row['VICTORIAS'] ?></td>
         </tr>
     <?php
         }
