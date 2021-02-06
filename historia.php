@@ -12,13 +12,16 @@
         color: white;
         text-align: center;
       }
-      #first{
-        padding-top: 80px;
-        color: #ff1801;
-        margin-bottom: 10px;
-      }
       nav{
         position: fixed;
+      }
+      #left{
+        float: left;
+        margin-left: 7%;
+      }
+      #right{
+        float: right;
+        margin-right: 7%;
       }
     </style>
   </style>
@@ -36,7 +39,7 @@
         <li><a href="social.html">Social</a></li>
         <li><a href="galeria.html">Galería</a></li>
         <li><a href="contacto.html">Contacto</a></li>
-        <li><a href="signin.html">Iniciar Sesión</a></li>
+        <li><a href="signin.html">Mi cuenta</a></li>
       </ul>
     </nav>
     <?php
@@ -49,11 +52,11 @@
     $selectpilotos = "SELECT * FROM pilotos;";
     $seleccionpilotos = mysqli_query($connect, $selectpilotos);
     $selectescuderias = "SELECT * FROM escuderias;";
-    $seleccionescuderias = mysqli_query($connect, $selectpilotos);
+    $seleccionescuderias = mysqli_query($connect, $selectescuderias);
 
     ?>
-    <h1 id="first">Campeonatos de F1 desde 1970</h1>
-    <table class="table">
+    <h1 id="first">Campeonatos de F1 desde el inicio de la competición</h1>
+    <table class="table" id="left">
         <tr>
         <th colspan="4"><h1>Mundial De Pilotos</h1></th>
         </tr>
@@ -68,16 +71,16 @@
         {
     ?>
         <tr>
-            <td><?php echo$row['YEAR'] ?></td>
-            <td><?php echo$row['NOMBRE'] ?></td>
-            <td><?php echo$row['ESCUDERIA'] ?></td>
-            <td><?php echo$row['VICTORIAS'] ?></td>
+            <td><?php echo $row['YEAR'] ?></td>
+            <td><?php echo $row['NOMBRE'] ?></td>
+            <td><?php echo $row['ESCUDERIA'] ?></td>
+            <td><?php echo $row['VICTORIAS'] ?></td>
         </tr>
     <?php
         }
     ?>
     </table>
-    <table class="table">
+    <table class="table" id="right">
     <tr>
         <th colspan="3"><h1>Mundial De Constructores</h1></th>
         </tr>
@@ -91,9 +94,9 @@
         {
     ?>
         <tr>
-            <td><?php echo$row['YEAR'] ?></td>
-            <td><?php echo$row['ESCUDERIA'] ?></td>
-            <td><?php echo$row['VICTORIAS'] ?></td>
+            <td><?php echo $row['YEAR'] ?></td>
+            <td><?php echo $row['ESCUDERIA'] ?></td>
+            <td><?php echo $row['VICTORIAS'] ?></td>
         </tr>
     <?php
         }
